@@ -1,38 +1,52 @@
+body
+  margin: 0
+
 #page1
   background: linear-gradient(to bottom right, #D4145A, #FBB03B)
   .image
-    top: 50%
-    background-image: url(./images/macbook.png)
+    top: calc(50% - 250px) !important
+    background-image: url(./images/imac.png)
+  .content
+    top: 25% !important
 
 #page2
   background: linear-gradient(to bottom right, #662D8C, #ED1E79)
   .image
-    background-image: url(./images/iphone.png)
+    background-image: url(./images/macbook.png)
 
 #page3
   background: linear-gradient(to bottom right, #00A8C5, #FFFF7E)
   .image
-    background-image: url(./images/imac.png)
+    background-image: url(./images/ipad.png)
 
 #page4
   background: linear-gradient(to bottom right, #312A6C, #852D91)
   .image
-    background-image: url(./images/ipad.png)
+    background-image: url(./images/iphone.png)
 
 .image
-  top: -50%
-  left: 50%
+  top: calc(-50%  - 250px)
+  left: calc(50% - 500px)
   background-size: contain
   background-repeat: no-repeat
   position: absolute
-  margin-top: -375px
-  margin-left: -375px
-  height: 750px
-  width: 750px
+  height: 500px
+  width: 500px
+
+.content
+  color: white
+  position: absolute
+  padding-left: 32px
+  top: -75%
+  left: 50%
+  width: 50%
+  height: 50vh
+  background: rgba(0,0,0,0.1)
 
 .pin-container
   height: 100%
   width: 100%
+  position: relative
 
 .page
   position: relative
@@ -43,3 +57,11 @@
 .scrollmagic-pin-spacer
   position: absolute !important
   clip: rect(auto, auto, auto, auto)
+
+.navigation
+  position: fixed
+  z-index: 10
+  font-size: 32px
+  padding: 32px
+  a
+    color: white
